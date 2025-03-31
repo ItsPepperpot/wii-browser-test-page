@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wii Browser Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+            background: #eee;
+            color: #444;
+            text-align: center
+        }
+
+        label {
+            display: inline-block;
+            margin: 20px 0 20px;
+            font-size: 24px;
+        }
+        input {
+            font-size: inherit;
+        }
+
+        code {
+            font-family: monospace;
+            font-size: 24px;
+            color: #ddd;
+            background: #333;
+            padding: 8px 14px;
+            border-radius: 4px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="datetime-local"],
+        input[type="time"],
+        select,
+        textarea,
+        button {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: inherit;
+            font-family: inherit;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: 24px;
+            height: 24px;
+        }
+
+        input[type="submit"] {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 8px
+        }
+
+        .container {
+            width: 80%;
+            margin: auto
+        }
+        .text-container {
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 80%;
+            height: auto
+        }
+        .required {
+            color: red;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function makeBackgroundPurple() {
+            document.body.style.backgroundColor = "#d2b4de";
+        }
+    </script>
+    <div class="container">
+        <div class="text-container">
+            <h1>Welcome to the Wii Browser</h1>
+            <p>This is a simple HTML page designed for the Nintendo Wii Opera browser.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio provident, consequuntur nostrum saepe, molestiae quas eaque omnis dolore asperiores reprehenderit dolorem accusamus nam, vel id tempora ipsa molestias sit veritatis.</p>
+            <p>Peter Piper picked a peck of pickled peppers.</p>
+            <a href="https://github.com">Link to GitHub</a><br>
+            <a href="https://html5test.co/">Link to HTML5 test</a><br>
+        </div>
+
+        <div class="text-container">
+            <button onclick="makeBackgroundPurple()">I love being purple!</button>
+
+            <form action="index.html">
+                <label for="name">Enter your name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name here" required minlength="3" maxlength="20"><br>
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email here">
+                <br>
+                <label for="password">Enter your password:</label>
+                <input type="password" id="password" name="password" placeholder="Your password here"><br>
+                <label for="message">Enter your message:</label><br>
+                <textarea name="message" id="message" rows="5" cols="10"></textarea>
+                <br>
+                <label for="search">Search:</label>
+                <input type="search" id="search" name="search" placeholder="Search here"><br>
+
+                <label for="tel">Enter your phone number:</label>
+                <input type="tel" id="tel" name="tel" placeholder="Your phone number here"><br>
+
+                <label for="url">Enter a URL:</label>
+                <input type="url" id="url" name="url" placeholder="http://example.com"><br>
+
+                <label for="number">Enter a number:</label>
+                <input type="number" id="number" name="number" placeholder="123"><br>
+
+                <label for="color">Choose a color:</label>
+                <input type="color" id="color" name="color" value="#000000"><br>
+
+                <label for="range">Choose a range:</label>
+                <input type="range" id="range" name="range" min="1" max="100"><br>
+
+                <label for="date">Choose a date:</label>
+                <input type="date" id="date" name="date"><br>
+
+                <label for="time">Choose a time:</label>
+                <input type="time" id="time" name="time"><br>
+
+                <label for="datetime">Choose a date and time:</label>
+                <input type="datetime-local" id="datetime" name="datetime"><br>
+
+                <label for="checkbox">Check this box:</label>
+                <input type="checkbox" id="checkbox" name="checkbox"><br>
+
+                <label for="radio">Select this option:</label>
+                <input type="radio" id="radio" name="radio" value="option1"> Option 1
+                <input type="radio" id="radio2" name="radio" value="option2"> Option 2<br>
+                
+                <label for="select">Choose an option:</label>
+                <select id="select" name="select">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                    <option value="option4">Option 4</option>
+                    <option value="option5">Option 5</option>
+                </select><br>
+
+                <label for="file">Upload a file</label>
+                <input type="file" name="file" id="file"><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <h2>Check out my cool Flash file</h2>
+        <p>The following is an <code>object</code> element embedding a swf file.</p>
+        <object width="640" height="480" data="test.swf" type="application/x-shockwave-flash">
+            <param name="movie" value="test.swf">
+            <param name="quality" value="high">
+            <param name="bgcolor" value="#ffffff">
+            <!-- Fallback content for browsers that don't support Flash -->
+            <p>Your browser does not support Flash. Please install Flash Player to view this content.</p>
+        </object>
+
+        <h2>My cool video</h2>
+        <p>The following is a <code>video</code> element with mp4, webm and mkv filetypes.</p>
+        <video width="640" controls>
+            <source src="Box.mp4" type="video/mp4">
+            <source src="Box.webm" type="video/webm">
+            <source src="Box.mkv" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+
+        <h2>My cool audio</h2>
+        <p>The following is an <code>audio</code> element with mp3, ogg and wav filetypes.</p>
+        <audio controls>
+            <source src="trainer.mp3" type="audio/mpeg">
+            <source src="trainer.ogg" type="audio/ogg">
+            <source src="trainer.wav" type="audio/wav">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+</body>
+
+</html>
